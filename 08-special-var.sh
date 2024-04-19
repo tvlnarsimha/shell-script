@@ -8,3 +8,5 @@ echo "home directory of current user: $HOME"
 echo "which user is running the script: $USER"
 echo "Host name: $HOSTNAME"
 echo "Process id of the current shell script: $$"
+sleep 60 &
+echo "Process id of the last backgound command: $!"
