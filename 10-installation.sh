@@ -19,7 +19,7 @@ else
 
 fi
 
-dnf install git1 -y
+dnf install git -y
 if [ $? -ne 0 ]
 then
   echo "installation of git...failure"
