@@ -2,8 +2,13 @@
 
 USERID=$(id -u)
 VALIDATE(){
-    echo "exit status: $1" 
-    echo "what are you doing: $2"
+   if [ $1 -ne 0 ]
+    then
+      echo "$2 ...Failure"
+      exit 1
+    else
+     echo "$2 ...Success"
+   fi
 
 
 }
@@ -15,7 +20,7 @@ else
  echo "you are the super user"
 fi
 
-dnf install mysql1 -y
+dnf install mysql -y
 VALIDATE $? "Installing mysql"
 
 
