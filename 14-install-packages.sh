@@ -13,5 +13,5 @@ echo "All packages :$@"
 
 for i in $@
 do
-  echo "package to install: $2"
+  echo "package to install: $4"
 done
