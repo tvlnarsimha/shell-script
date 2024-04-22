@@ -20,7 +20,7 @@ else
  echo "you are the super user"
 fi
 
-dnf install mysql -y
+dnf install mysql1 -y
 VALIDATE $? "Installing mysql"
 
 
