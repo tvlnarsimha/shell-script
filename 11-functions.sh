@@ -5,12 +5,12 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 VALIDATE(){
-   if [ $? -ne 0 ]
+   if [ $2 -ne 0 ]
     then
-      echo "$? ...Failure"
+      echo "$3 ...Failure"
       exit 1
     else
-     echo "$? ...Success"
+     echo "$3 ...Success"
    fi
 
 
